@@ -5,10 +5,10 @@ if(empty($_POST['name'])      ||
    empty($_POST['phone'])     ||
    empty($_POST['message'])   ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-//    {
-//    $destinatario= "torocreativoo@gmail.com";
-//    $asunto="contacto desde nuestra web";
-//    }
+   {
+   $destinatario= "torocreativoo@gmail.com";
+   $asunto="contacto desde nuestra web";
+   }
    
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
