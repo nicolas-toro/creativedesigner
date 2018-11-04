@@ -1,26 +1,36 @@
 <?php
-// Check for empty fields
-if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
-   empty($_POST['phone'])     ||
-   empty($_POST['message'])   ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-//    {
-//    $destinatario= "torocreativoo@gmail.com";
-//    $asunto="contacto desde nuestra web";
-//    }
-   
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
-   
-// Create the email and send the message
-$to = 'torocreativoo@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: torocreativoo@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
-mail($to,$email_subject,$email_body,$headers);
-return true;         
+if(isset($_POST['email'])) {
+
+// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
+$email_to = "torocreativoo@gmail.com";
+$email_subject = "Contacto desde el sitio web";
+
+// Aquí se deberían validar los datos ingresados por el usuario
+if(!isset($_POST['first_name']) ||
+!isset($_POST['last_name']) ||
+!isset($_POST['email']) ||
+!isset($_POST['telephone']) ||
+!isset($_POST['comments'])) {
+
+echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
+echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
+die();
+}
+
+$email_message = "Detalles del formulario de contacto:\n\n";
+$email_message .= "Nombre: " . $_POST['first_name'] . "\n";
+$email_message .= "Apellido: " . $_POST['last_name'] . "\n";
+$email_message .= "E-mail: " . $_POST['email'] . "\n";
+$email_message .= "Teléfono: " . $_POST['telephone'] . "\n";
+$email_message .= "Comentarios: " . $_POST['comments'] . "\n\n";
+
+
+// Ahora se envía el e-mail usando la función mail() de PHP
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+
+echo "¡El formulario se ha enviado con éxito!";
+}
 ?>
