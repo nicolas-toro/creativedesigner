@@ -1,0 +1,2109 @@
+/*ctrl+E para visualizar panel de color y botón ESC para salir*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/*
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 20px;
+    right: 20px;
+  
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background: #0df053;
+    opacity: 50%;
+    
+}
+
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%; 
+}
+
+
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+/* Header - sección 1 */
+
+.header {
+    background: linear-gradient(
+        rgba(1, 28, 36, 0.92),
+    
+      rgba(0, 60, 79, 0.92),
+    rgba(6, 67, 87, 0.87),
+        
+         rgba(0, 60, 79, 0.83),
+      rgba(0, 60, 79, 0.85)
+    ),
+    url(images/header.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 80px 0 0 0; /*la imagen del header se vincula directamente desde el css, dependiendo del tamaño de la imágenes es como se va a visualizar en el navegador. También se le agrego una opacidad y color oscuro */
+    
+}
+
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+
+
+
+.menu {
+        padding: 20px;
+    }
+
+/*le da un margen al logotipo y al menu a todos los lados*/
+
+
+
+
+
+
+
+/*.
+La etiqueta logo no se ocupa por el momento
+
+logo {
+      
+}
+
+
+*/
+
+
+.socials {
+    display: flex;
+    
+    
+}
+
+.social {
+    margin: 0 5x;
+    height: 40px;
+    width: 40px;
+    border: px solid #2cc0d3;
+    border-radius: 70%;
+}
+
+.social:hover {
+    background-color: #2cc0d3;
+}
+
+.social img {
+    margin: 8px 0 0 9px;
+}
+
+
+
+
+
+
+
+.menu .navbar ul li {
+    position: relative;
+    float: left; 
+   
+}
+
+.menu .navbar ul li a {
+    font-size: 17px;
+    
+    padding: 30px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+.menu .navbar ul li a:hover {
+    color:#2cc0d3;
+}
+/*color de tipografia al pasar el cursor de navegación*/
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/*se aculta el icono de menu que agregagamos en el html*/
+
+.header-txt {
+   
+    text-align: right;
+ 
+    margin-left: 500px;
+    padding-top: 150px;
+}
+
+
+
+.header-txt h1 {
+ 
+    font-size: 50px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+ 
+    
+}
+
+.header-txt p {
+   
+    
+    font-size: 16px;
+    margin-left: 140px;
+  
+}
+/*tamaño, tipografía y color del texto de llamado a la acción*/
+
+p {
+    font-size: 17px; 
+    color: #f7f7f7;
+    margin-bottom: 35px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  border: 2px solid #FFFFFF;
+    
+}
+
+
+
+
+
+
+
+/* About - Sección 2 */
+
+.about {
+    padding: 100px 0;
+    background-color:  #184358;
+    
+    background: linear-gradient(
+     
+     rgba(24, 67, 88, 0.65),
+     
+  
+       
+      
+        
+          
+     
+         rgba(31, 31, 31, 0.41),
+       
+      rgba(24, 67, 88, 0.65),
+          rgba(0, 0, 0, 0.85)
+    ),
+        
+        
+        
+        
+       /* si
+    ),
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/serviciosfondo.png); /*imagen de fondo */
+    
+    
+
+    
+}
+    
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    padding-top: 17px;
+}
+
+.about-txt {
+    flex-basis: 50%;
+    padding-right: 35px;
+}
+
+
+.about-txt p {
+    padding-top: 10px;
+}
+
+
+.about-img {
+    flex-basis: 50%;   
+}
+
+.about-img img {
+    border-radius: 15px; 
+}
+
+
+
+
+
+
+
+
+
+/* 
+
+
+padding: 1px;
+     font-size: 15px;
+     margin: 15px 0 10pxpx 0;
+     border: 2px solid #e69220;
+     color: #FFFFFF;
+}
+
+
+
+
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: linear-gradient(
+        90deg,
+        rgba(245,99,72,1) 0%,
+    rgba(254,140,32,1)100%
+    );
+}
+
+
+
+
+
+
+description Sección 1.2
+
+.menu .navbar ul li {
+    position: relative;
+    float: left; 
+   
+}
+
+.menu .navbar ul li a {
+    font-size: 17px;
+    
+    padding: 25px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 300;
+}
+
+
+
+ background: linear-gradient(
+        rgba(0, 0, 0, 0.7), ------- si le bajo a 0.5 la imagen se puede ver más clara -------
+        rgba(0, 0, 0, 0.7)
+    ),
+        url(images/bg2.jpg); ------- imagen de fondo ----------
+    background-position: top center;
+    background-repeat: no-repeat; ------- para que no se repita la imagen --------
+    background-size: cover;
+
+
+
+*/
+
+
+
+
+.description {
+    
+    padding: 20px ;
+    background-color: #01020d;
+}
+
+
+.description-content {
+    display: flex;
+    align-items: center;
+}
+
+
+.description-txt {
+  position: relative;
+  font-size: 15px; 
+  left: 50%;
+  transform: translate(-53%, -0%);
+    letter-spacing: 3px;
+    
+    
+}
+
+
+
+
+.description ul li {
+     position: relative;
+    float:left; 
+    padding: 15px;
+    color: #d36f62;
+   
+    
+ 
+
+    }
+   
+
+/* Plans - Sección 4 */
+
+.plans {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #020203;  /*color de fordo de la caja*/ 
+    
+  opacity:250%;
+    
+   
+   
+     background: linear-gradient(
+     
+          rgba(0, 0, 0, 0.5),
+
+    rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.4)
+    ),
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/plan.png); /*imagen de fondo */
+    
+   
+    
+    
+    
+    
+}
+
+.plans hr {
+    width: 5%;
+ 
+}
+
+
+.plans-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.plan-1 {
+    flex-basis: calc(33.3% - 20px);
+    border: 1px solid #515151;
+    padding: 30px 50px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.plan-1 span {
+    font-size: 40px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.plans h1 {
+    color: #FFFFFF;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.plan-1 h3 {
+     padding-bottom: 15px;
+     font-size: 15px;
+     color: #FFFFFF;
+}
+
+
+
+.plan-1 p {
+    margin-bottom: 10px;
+     
+}
+
+
+
+h1 {
+    color: #FFFFFF;
+    font-size: 30px;
+    padding-bottom: 5px;
+    padding-bottom: 20px;
+}
+
+
+h2 {
+    color: #2fc7db;
+  
+}
+
+
+/* check1 - Sección 5 */
+
+
+.check1 {
+    
+   
+  
+    background-color:  #184358;
+    padding: 15px;
+   object-fit: cover;
+    
+    
+      
+     background: linear-gradient(
+           rgba(153, 157, 159, 0.19),
+     
+          rgba(0, 0, 0, 0.18),
+         rgb(0, 0, 0)
+
+  
+
+
+    ),
+         
+         
+        
+         
+         
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/fondocheck1.png)
+         
+      
+      /*color de fordo de la caja*/ 
+    
+         ; /*imagen de fondo */
+     
+}
+
+
+
+
+
+.check1-content {
+    display: flex;
+    
+ 
+}
+
+.check1-txt  {
+    
+   flex-basis: 50%;
+   margin: 40px auto;
+   padding-left: 130px;
+    
+}
+
+.check1-txt .service {
+   padding-top: 40px;
+    margin: 0;
+ 
+    
+
+}
+
+.check1-txt p {
+    
+    font-size: 16px;
+    padding-top: 10px;
+    color: #f7f7f7;
+    
+
+}
+
+
+
+
+
+
+
+/* check2 - Sección 5 */
+
+
+.check2 {
+    background-color:  #113446;
+    padding: 15px;
+    
+    
+          
+     background: linear-gradient(
+      rgba(7, 8, 8, 0.24),
+     rgba(75, 70, 70, 0.24),
+     
+          rgba(26, 26, 26, 0.47),
+         rgb(0, 0, 0)
+
+  
+
+
+    ),
+         
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/fondocheck2.png); /*imagen de fondo */
+    
+   
+    
+    
+   
+   
+    
+}
+
+
+.check2-content {
+    display: flex;
+    
+}
+
+.check2-txt  {
+   flex-basis: 50%;
+   margin: 40px auto;
+   padding-left: 130px;
+}
+
+.check2-txt .service {
+   padding-top: 40px;
+    margin: 0;
+
+    
+
+}
+
+.check2-txt p {
+    font-size: 16px;
+    padding-top: 10px;
+    color: #f7f7f7;
+    
+
+}
+
+
+
+
+/* check3 - Sección 5 */
+
+
+.check3 {
+    background-color:#0e2734;
+    padding: 15px;
+    
+        
+
+          
+     background: linear-gradient(
+     
+      rgba(7, 8, 8, 0.24),
+     rgba(75, 70, 70, 0.24),
+     
+          rgba(26, 26, 26, 0.47),
+         rgb(0, 0, 0)
+
+  
+
+
+    ),
+          
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/fondocheck3.png); /*imagen de fondo */
+    
+   
+    
+    
+   
+   
+   
+}
+
+
+.check3-content {
+    display: flex;
+    
+}
+
+.check3-txt  {
+   flex-basis: 50%;
+   margin: 40px auto;
+   padding-left: 130px;
+}
+
+.check3-txt .service {
+   padding-top: 40px;
+    margin: 0;
+
+    
+
+}
+
+.check3-txt p {
+    font-size: 16px;
+    padding-top: 10px;
+    color: #f7f7f7;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.service {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.service h3 {
+    font-size: 17px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+ /*CARD códigos anteriores
+
+
+
+
+.tarjeta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(9, 74, 136)
+    
+    padding: 20px ;
+    background-color: #a7a7a7;
+}
+
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 420px;
+    
+    
+}
+
+
+
+.card .face  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  -- esconde el elemeneto ----
+   
+    border-radius: 2px;
+    overflow: hidden;
+
+    transition: .5s;
+}
+
+
+
+.card .front {
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; ----indica que la imegen se redimencione---
+}
+
+
+
+
+.card .front h3 {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+          
+}
+
+.card .back {
+   
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    
+}
+
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+.card .back .link a {
+    color: #f3f3f3;
+    
+}
+
+.card .back h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+    
+}
+
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+    
+}
+
+
+
+
+card 222222
+
+
+.wrap {
+    width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+
+
+.tarjeta-wrap{
+    
+    margin: 10px;
+    -webkit-perspective: 800;
+    perspective: 800;
+}
+
+
+
+
+
+.tarjeta {
+   
+  
+    transform: rotateY(0deg);
+  
+    
+    
+    width: 300px;
+    height: 350px;
+    background: #F29720;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    
+}
+
+.adelante, .atras {
+    
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;   
+}
+
+.adelante {
+     
+    width: 100%;
+}
+
+.atras {
+    
+    
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: "open sans";
+    
+    
+}
+
+
+.tajeta-wrap:hover .tarjeta {
+    transform:  rotateY(180deg);
+    
+    
+}
+
+
+
+*/
+
+/*---section de fondo del contenedor---*/
+
+.estructur{
+    
+    
+     padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      background-color:  #184358;
+    background-color: #05171d; 
+    
+    
+    
+     background: linear-gradient(
+         
+          rgba(24, 67, 88, 0.65),
+     
+         rgba(0, 0, 0, 0.41),
+       
+      rgba(24, 67, 88, 0.65)
+    ),
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/serviciosfondo.png); /*imagen de fondo */
+    
+    
+
+    
+}
+
+
+
+
+
+
+
+
+/*---contenedor de las tarjetas---*/
+.card-fondo {
+
+   
+   display: flex;
+    flex-wrap: wrap;
+   
+    
+   
+}
+
+
+
+
+
+
+/*---código adicional de card---*/
+
+
+
+
+  /*---tamaño de la tarjeta---*/
+
+.flip-container {
+  background-color: transparent;
+  width: 350px;
+  height: 450px;
+  perspective: 1000px;
+  margin: 20px;
+  
+
+  
+    
+}
+
+
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 10px #000;
+    border: 2px solid  #fff;
+    display: flex;
+    align-items: center,
+
+ 
+    
+ 
+}
+
+
+
+
+.flip-container:hover .card {
+  transform: rotateY(180deg);
+    
+    
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+.front {
+  background-color: #403f50;
+  color: #fff;
+  
+}
+.back {
+  background-color: #383a3b;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/*---código adicional de card---*/
+
+
+
+.card .front img {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*---indica que la imegen se redimencione---*/
+}
+
+
+
+
+.card .front h3 {
+    position:absolute;
+    z-index: 2; /*---para colocar objeto arriba / va con etiqueta en el elemento card front img se coloca position= absoluta---*/
+    
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 43px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+     font-size: 16px;
+    margin-top: 20px;
+    letter-spacing: 3px; /*---espaciamiento de letras---*/       
+}
+
+
+.card   li {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #fff;
+     font-weight: 500;
+   
+}
+
+
+
+.estructur h2 {
+    font-size: 28px;
+   
+}
+
+
+
+.estructur hr {
+    width: 5%;
+ 
+   text-align: center;
+    left: 50%;
+  
+ 
+}
+
+
+hr {
+    border: 1px solid #2cc0d3; /*linea decorativa texto de bienvenidos*/
+    width: 10%;
+    margin-bottom: 30px; 
+}
+
+
+
+
+
+
+/* Blog - Sección 6 
+
+
+
+.blog {
+    padding: 120px 0; ----si le quito el 0 agrega margenes ---
+    background-color: #24272E;
+    text-align: center;
+    
+   
+}
+
+.blog-content {
+    display: flex;  ----- las columnas no se adaptan correctamente,se posicionan a la izquierda -----
+    justify-content: space-between;
+    margin-top: 35px; ---- alinea el elemneto hacia abajo ----
+}
+
+.blog h2 {
+    font-size: 28px;
+   
+}
+
+
+
+.blog-1 {
+    flex-basis: calc(33.3% - 25px);
+    background-color: #191A1F;
+   
+}
+
+.blog-1 img {
+   margin-bottom: 15px;
+}
+
+.blog-txt {
+    padding: 20px;
+}
+
+.blog-txt h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin 15px 0;
+}
+
+.blog hr {
+    width: 5%;
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+*/
+
+
+/* Contact - Sección 7 */
+
+
+.contact {
+    padding: 80px 0;
+ background-color: #339eac;
+    
+   background: linear-gradient(
+     
+        
+        
+    rgba(44, 192, 211, 0.47),
+       
+      rgba(44, 192, 211, 0.69)
+    ),
+       /* si le bajo a 0.5 la imagen se puede ver más clara */
+  
+        url(images/correo.png); /*imagen de fondo */
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+}
+
+.contact-content {
+    text-align: center;
+   
+}
+
+.contact-content p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-content h1 {
+   font-size: 35px;
+   color: #fff;
+}
+
+.contact-content h2{
+ 
+    padding-bottom: 20PX;
+   color: #fff;
+}
+
+
+.contact-btn {
+    padding-top: 20px;
+}
+
+
+
+/* Map - Sección 8 */
+
+
+.map {
+   padding: 0 auto;
+    margin: 0 auto;
+     background-color: #000000;
+}
+
+
+.img-map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+ 
+}
+
+
+
+
+
+/* Footer - Sección 9 */
+
+
+
+.footer {
+    width: 100%;
+   
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.logo2 {
+    height: 80px;
+    margin-bottom: 2rem;
+}
+
+
+.social-icons-container, footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(images/linkedin.svg);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+
+
+
+.social-icon:hover {
+    background-color: #121212;
+    filter: invert(1);
+}
+
+
+.social-icon:nth-last-of-type(2) {
+    background-image: url(images/s3.svg)
+}
+
+
+.social-icon:nth-last-of-type(3) {
+    background-image: url(images/s1.svg)
+}
+
+
+.footer-menu-container {
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: #f2f2f2;
+    opacity: 0.3;
+    text-align: center;
+    font-size: 14px;
+  
+    
+}
+
+
+
+
+
+
+
+
+/* otra sección  */
+
+.link h3 {
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.link a {
+    font-size: 17px;
+    color: #D4D4D4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.link a:hover {
+    color: #2cc0d3; /* efecto para cambiar el color de los enlaces*/
+    
+}
+
+
+
+/* comenzamos con la programación responsive - media query*/
+
+
+
+
+ /* desarrollo con dispositivos pequeños*/
+
+
+/* el desarrollador le coloco 991 px pero no adaptaba bien asi que le coloque 1250px y se visualiza genial y diversos dispositivos*/
+@media(max-width:1250px){
+    
+
+    
+    
+  .btn-wsp {
+    position: fixed;
+    width: 105px;
+    height: 105px;
+    line-height: 55px;
+    bottom:60px;
+    right: 60px;
+  
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+     
+}  
+    
+    
+ .btn-wsp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background: #0df053;
+    opacity: 50%
+    
+}   
+    
+.btn-wsp img {
+        width: 105px;
+    height: 105px;
+    } 
+    
+
+ h1 {
+   font-size: 50px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 15px 0;
+    line-height: 1; /*separación interlineado*/
+}
+    
+    
+.plans h1 {
+     font-size: 50px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 15px 0;
+    line-height: 1;
+    padding-top: 50px;
+}
+   
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    .menu-icono {
+  width: 40px;
+}
+
+    .logo1{
+        position: relative;
+        left: 6%;
+        width: 150px;
+        height: 200px
+    }
+  
+    
+ 
+    .menu {
+        padding: 20px;
+    
+    }
+    
+    
+    
+    
+    .header-content a {
+        display: none;
+        
+    }
+    
+    
+
+    
+    
+    
+    .header-txt h1 {
+   
+  
+    margin-bottom: 50px;
+     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        font-size: 65px;
+}
+    
+    
+   .header-txt p {
+    
+    font-size: 25px;
+        
+    margin-bottom: 50px;
+     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        text-align: center;
+       
+        padding: 0 auto;
+        margin-left: 10px;
+        padding-top: 20px;
+}
+    
+    
+    .plan-1 p {
+        font-size: 20px;
+        
+    }
+    
+    
+   
+        
+    .about-txt h2 {
+   
+  
+   
+     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 55px;
+     margin-left: 40px;
+    color: #fff;
+}
+    
+    
+     
+   .about-txt p {
+    
+    font-size: 15px;
+        
+    margin-bottom: 100px;
+     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        text-align: center;
+       
+        padding: 0 auto;
+        margin-left: 40px;
+        padding-top: 20px;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .check1-txt p {
+         font-size: 20px;
+        text-align: center;
+        width: 350px;
+        padding: 0 40px;
+        margin-left: 10px;
+        padding-top: 20px;
+    }
+    
+    
+    .check2-txt p {
+        font-size: 20px;
+        text-align: center;
+        width: 350px;
+        padding: 0 40px;
+        margin-left: 10px;
+        padding-top: 20px;
+    }
+    
+    
+    .check3-txt p {
+        font-size: 20px;
+        text-align: center;
+        width: 350px;
+        padding: 0 40px;
+        margin-left: 10px;
+        padding-top: 20px;
+        
+       
+    }
+    
+    
+    .about-content p {
+        font-size: 20px;
+    }
+    
+    
+    .about-img {
+    padding-bottom: 80px;  
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    .menu label {
+        display: initial;
+        position: relative;
+        left: 35%;
+    }
+    
+    
+    
+
+    
+    
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2cc0d3;
+        display: none; /* con esta etiqueta desaparece el menu lateral*/
+      
+    }
+    
+    .menu .navbar ul li {
+        width: 100%;
+    
+    }
+    
+    
+    
+    .menu .navbar ul li a {
+    font-size: 35px;
+    text-align: center;
+    
+    padding: 30px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 400;
+}
+    
+    
+    .description {
+        display: none;
+    }
+    
+    
+    .socials {
+        display: none;
+    }
+    
+    .menu .navbar ul li a:hover {
+        color: #191A1F;
+    }
+    
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    
+    .header {
+        min-height: 0vh;
+        padding: 100px 40px;
+    }
+    
+    
+    
+    
+    .header-content {
+    display: flex;
+         align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.  header .menu-container {
+    flex-basis: calc(33.3% - 20px);
+    border: 1px solid #515151;
+    padding: 30px 50px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+    
+    
+    
+    
+    
+  
+    
+    
+    .header-txt {
+        text-align: center;
+        padding: 0;
+         text-align: center;
+    padding: 0 40px;
+    margin-left: 10px;
+    padding-top: 80px;
+        
+    }
+    
+    
+    .description {
+    
+    padding: 0px ;
+    background-color: #01020d;
+}
+
+
+    .description-content {
+    display: flex;
+    align-items: center;
+    
+    
+    
+    }
+    
+    
+    .estructur h1{
+      font-size: 50px;
+        
+    }
+    
+    .card-fondo {
+ padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+
+    flex-wrap: wrap;
+   
+    
+   
+}
+
+    
+    
+    
+    
+   
+    .card   li {
+    margin-bottom: 30px;
+    font-size:25px;
+    color: #fff;
+     font-weight: 500;
+   
+}
+
+    
+    
+    .flip-container {
+  background-color: transparent;
+  width: 800px;
+  height: 630px;
+  perspective: 1000px;
+  margin: 30px;
+
+
+  
+    
+}
+    
+    
+    
+    
+    
+    
+    
+
+    .description-txt {
+  
+    opacity: 0;  
+    
+    }
+
+
+
+
+    .description ul li {
+     position: relative;
+     float:left; 
+     padding: 15px;
+     color: #d36f62;
+     }
+    
+     
+    
+    .check1 {
+   display: none;
+
+}
+
+    
+  
+    .check2 {
+       display: none;
+}
+
+    
+    
+  
+    .check3 {
+       display: none;
+}
+
+    
+  
+
+    .contact-content h1 {
+        font-size: 55px;
+    }  
+    
+    
+
+    .contact-content h2 {
+        font-size: 35px;
+    }  
+    
+    
+
+    .contact-content p {
+        font-size: 35px;
+    }  
+    
+    
+    .contact-content .contact-btn {
+       
+        font-size: 30px;
+        
+        
+        
+    }
+    
+    
+    
+   
+    
+    .about {
+        padding: 30px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .testimonial {
+        padding: 30px;
+    }
+    
+    .testimonial-content {
+        flex-direction: column;
+    }
+    
+    .testimonial-1 {
+        margin-bottom: 30px;
+    }
+    
+    .plans {
+        padding: 30px;
+    }
+    
+    .plans-content {
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    
+    .plan-1 {
+        margin-bottom: 30px;
+    }
+    
+    .information {
+        padding: 30px;
+    }
+    
+    .information-content {
+        flex-direction: column;
+    }
+    
+    informatiom-txt {
+        order: -2;
+        padding: 0;
+        margin: 30px 0;
+    }
+    
+    .blog {
+        padding: 30px;
+    }
+    
+    .blog-content {
+        flex-direction: column;
+    }
+    
+    .blog-1 {
+        margin-bottom: 30px;
+    }
+    
+    .contact {
+        padding: 100px 30px;
+    }
+    
+    
+    
+
+    .logo2 {
+        width: 150px;
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+
+
+
+    .social-icon {
+        height: 120px;
+        width: 120px;
+        border-radius: 60px;
+    } 
+
+
+
+    .map .img-map {
+      display: none;
+    }
+    
+    
+    
+    
+
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
